@@ -14,7 +14,6 @@ import java.io.IOException;
 public class ImageController {
 
     @GetMapping("/images")
-    @ResponseBody
     public String showUploadImagesForm() {
         return "upload";
     }
@@ -24,6 +23,9 @@ public class ImageController {
     public String showImage(@PathVariable String id) {
         return "Showing image with id of " + id;
     }
+
+    @PostMapping("/images/upload")
+    public String
 
     @RequestMapping(value = "/images/upload", method = RequestMethod.GET,
             produces = MediaType.IMAGE_JPEG_VALUE)
